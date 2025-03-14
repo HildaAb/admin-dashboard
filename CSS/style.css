@@ -247,6 +247,7 @@ main .insights > div {
   border-radius: var(--card-border-radius);
   margin-top: 1rem;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
 }
 
 main .insights > div:hover {
@@ -331,4 +332,39 @@ main .number {
 main .insights small {
   margin-top: 1.6rem;
   display: block;
+}
+
+/*recent orders*/
+main .recent-orders h2 {
+  margin-bottom: 0.8rem;
+}
+
+main .recent-orders table {
+  background: var(--color-white);
+  width: 100%;
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  transition: all 300ms ease;
+}
+
+main .recent-orders table:hover {
+  box-shadow: none;
+}
+
+main .recent-orders table td {
+  height: 2.8rem;
+  border-bottom: 1px solid #dce1eb;
+  color: var(--color-dark-variant);
+}
+main .recent-orders table tr:last-child td {
+  border: none;
+}
+
+main .recent-orders a {
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
+  color: var(--color-primary);
 }
