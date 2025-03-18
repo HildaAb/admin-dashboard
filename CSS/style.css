@@ -7,7 +7,7 @@
   --color-info-dark: #7d8da1;
   --color-info-light: #dce1eb;
   --color-dark: #363949;
-  --color-light: #rgba(132, 139, 200, 0.18);
+  --color-light: rgb(226, 222, 222);
   --color-primary-variant: #111e88;
   --color-dark-variant: #677483;
   --color-background: #f6f6f9;
@@ -21,6 +21,14 @@
   --paddin-1: 1.2rem;
 
   --box-shadow: 0 2rem 3rem var(--color-light);
+
+  .dark-theme-variables {
+    --color-background: #181a1e;
+    --color-white: #202528;
+    --color-dark: #edeffd;
+    --color-dark-variant: rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2rem 3rem var(--color-light);
+  }
 }
 
 * {
@@ -54,7 +62,7 @@ body {
   width: 90%;
   margin: 0 auto;
   gap: 1.8rem;
-  grid-template-columns: 14rem auto 21rem;
+  grid-template-columns: 14rem auto 23rem;
 }
 
 a {
@@ -132,6 +140,9 @@ b {
 }
 
 /*aside*/
+aside {
+  height: 100vh;
+}
 
 aside .top {
   display: flex;
@@ -167,7 +178,7 @@ aside .sidebar {
   flex-direction: column;
   height: 86vh;
   position: relative;
-  top: 1rem;
+  top: 3rem;
 }
 
 aside h3 {
@@ -185,9 +196,13 @@ aside .sidebar a {
   transition: all 300ms easy;
 }
 
+aside .sidebar a i {
+  font-size: 1.6rem;
+}
+
 aside .sidebar a:last-child {
   position: absolute;
-  bottom: -8rem;
+  bottom: -4rem;
   width: 100%;
 }
 
@@ -204,7 +219,7 @@ aside .sidebar a.active:before {
   background: var(--color-primary);
 }
 
-aside .sidebar a.active span {
+aside .sidebar a.active i {
   color: var(--color-primary);
   margin-left: calc(1rem-3px);
 }
@@ -212,6 +227,7 @@ aside .sidebar a.active span {
 aside .sidebar a:hover {
   color: var(--color-primary);
 }
+
 aside .sidebar .message-count {
   background: var(--color-danger);
   color: var(--color-white);
@@ -405,17 +421,16 @@ main .recent-orders a {
   border-radius: var(--border-radius-1);
 }
 
-.right .theme-toggle {
+.right .theme-toggler i {
   font-size: 1.2rem;
   width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: baseline;
   justify-content: center;
 }
 
-.right .theme-toggler span.active {
+.right .theme-toggler i.active {
   background: var(--color-primary);
   color: white;
   border-radius: var(--border-radius-1);
