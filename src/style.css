@@ -9,7 +9,7 @@
   --color-dark: #363949;
   --color-light: rgb(226, 222, 222);
   --color-primary-variant: #111e88;
-  --color-dark-variant: #677483;
+  --color-dark-variant: #979a9d;
   --color-background: #f6f6f9;
 
   --card-border-radius: 2rem;
@@ -26,7 +26,7 @@
     --color-background: #181a1e;
     --color-white: #202528;
     --color-dark: #edeffd;
-    --color-dark-variant: rgba(0, 0, 0, 0.4);
+    --color-ligth-variant: rgba(228, 223, 223, 0.4);
     box-shadow: 0 2rem 3rem var(--color-light);
   }
 }
@@ -54,7 +54,7 @@ body {
   background: var(--color-backgrond);
   user-select: hidden;
   overflow-x: hidden;
-  color: var(--color-dark);
+  color: rgb(87, 85, 85);
 }
 
 .container {
@@ -527,6 +527,11 @@ main .recent-orders a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.right .sales-analytics .add-product:hover {
+  background: var(--color-primary);
+  color: white;
 }
 
 .right .sales-analytics .add-product div {
